@@ -38,7 +38,7 @@ begin
  if op='+' then v:=(a->>'value')::numeric+(b->>'value')::numeric;
  elsif op='-' then v:=(a->>'value')::numeric-(b->>'value')::numeric;
  elsif op='*' then v:=(a->>'value')::numeric*(b->>'value')::numeric;
- else if (b->>'value')::numeric=0 then raise exception 'Division by zero'; end if; v:=floor((a->>'value')::numeric/(b->>'value')::numeric); end if;
+ else if (b->>'value')::numeric=0 then raise exception 'Division by zero'; end if; v:=round((a->>'value')::numeric/(b->>'value')::numeric,3); end if;
  k:='('||(a->>'key')||op||(b->>'key')||')'; disp:='('||(a->>'display')||' '||case op when '*' then '×' when '-' then '−' when '//' then '÷' else '+' end||' '||(b->>'display')||')';
  return jsonb_build_object('value',v,'key',k,'display',disp,'digits',ds,'numeric',false);
 end $$;
