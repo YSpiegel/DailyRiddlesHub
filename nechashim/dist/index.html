@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f5ed"><title>נחשים — משחק מילים</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="."><span class="brand-icon">〰</span> נחשים<span class="brand-dot">.</span></a><button class="help-trigger" id="helpBtn" aria-label="איך משחקים?">?</button></header>
+<main class="layout">
+<section class="intro"><div class="eyebrow"><span class="spark">✳</span> משחק מילים שמתפתל</div><h1>מחברים אותיות.<br><em>מגלים את הקשר.</em></h1><p class="intro-copy">כל מילה מסתתרת במסלול משלה.<br>מצאו אותן, אות אחר אות.</p><div class="rule-card"><span class="rule-icon">↝</span><div><strong>איך משחקים?</strong><p>גוררים או לוחצים על אותיות סמוכות בכל כיוון. כל אות בלוח שייכת למילה אחת.</p></div></div><div class="desktop-note">חידה קטנה, הפסקה גדולה <span>✳</span></div></section>
+<section class="game" aria-label="לוח המשחק"><div class="game-heading"><div><div class="game-kicker">החידה שלפניכם <span>✳</span></div><h2>מה הקשר?</h2></div><span class="edition">מהדורת הדגמה<br><b>01 / 01</b></span></div><div class="clue"><div><span class="clue-label">רמז לנושא</span><strong>הכי טעים כשהשמש בחוץ</strong></div><span class="clue-symbol">☀</span></div>
+<div class="progress-row"><span>מילים שנמצאו <b id="count">0 / 10</b></span><span id="progressText">יוצאים לדרך!</span></div><div class="progress"><i id="progressBar"></i></div>
+<div class="board-wrap"><div id="board" class="board" aria-label="לוח אותיות, 8 שורות ו־6 עמודות"><svg id="lines" aria-hidden="true" viewBox="0 0 600 800" preserveAspectRatio="none"></svg></div></div>
+<div class="selection"><span id="current">בחרו אות כדי להתחיל</span><button id="submit" disabled>בדיקה ←</button></div><p id="message" class="message" aria-live="polite">אפשר גם לגרור בין האותיות</p>
+<div class="found-head"><strong>האוצרות שמצאתם</strong><span>כולל מילת נושא אחת <b>✦</b></span></div><div id="found" class="found"><span class="empty">כאן יופיעו המילים שמצאתם</span></div><div class="game-bottom"><button id="hintBtn" class="text-btn">✧ &nbsp; צריכ/ה רמז?</button><button id="resetBtn" class="text-btn subtle">התחלה מחדש ↺</button></div></section>
+</main><footer>נחשים <span>✳</span> נוצר באהבה למילים</footer>
+<dialog id="help"><button class="close" aria-label="סגירה">×</button><div class="eyebrow">כמה כללים קטנים</div><h2>מוכנים להתפתל?</h2><p>מחפשים מילים שקשורות לרמז. מחברים אותיות שנוגעות זו בזו — גם באלכסון — בלי להשתמש באותה אות פעמיים.</p><p>אפשר לגרור על הלוח, או ללחוץ על האותיות ואז על ״בדיקה״. לחיצה חוזרת על האות האחרונה מבטלת אותה.</p><p>מילת הנושא הארוכה מחברת בין שני קצוות מנוגדים של הלוח ומסומנת בזהב. כל אות בלוח שייכת בדיוק למילה אחת.</p><button class="primary close-dialog">הבנתי, מתחילים!</button></dialog>
+<script src="app.js"></script></body></html>
